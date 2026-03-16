@@ -1,5 +1,7 @@
-def handler(request):
-    return {
-        "statusCode": 200,
-        "body": "Hello World from CI/CD Deployment 🚀"
-    }
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello World from CI/CD Deployment 🚀"
